@@ -1,0 +1,70 @@
+{
+  "id": "orbit",
+  "preset": "blue-professional",
+  "mood": "illustrated night world (Kurzgesagt-inspired): deep navy, flat vivid shapes with soft glows, amber + teal, heavy geometric sans",
+  "colors": {
+    "bg": "#101A3D",
+    "ink": "#F7F3E8",
+    "muted": "#AEB8DC",
+    "faint": "#5F6C9E",
+    "accent": "#FFB627",
+    "accentText": "#FFC857",
+    "onAccent": "#101A3D",
+    "neg": "#FF6B6B",
+    "pos": "#4FD1B5",
+    "surface": "rgba(255,255,255,0.07)",
+    "line": "rgba(247,243,232,0.22)",
+    "ground": "rgba(255,255,255,0.05)"
+  },
+  "faces": [
+    {
+      "family": "Hanken Grotesk",
+      "file": "HankenGrotesk-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "file": "Inter-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    },
+    {
+      "family": "JetBrains Mono",
+      "file": "JetBrainsMono-Variable.woff2",
+      "weight": "100 800",
+      "style": "normal"
+    }
+  ],
+  "stacks": {
+    "display": "\"Hanken Grotesk\", \"Inter\", sans-serif",
+    "body": "\"Inter\", sans-serif",
+    "mono": "\"JetBrains Mono\", monospace"
+  },
+  "type": {
+    "displayWeight": 850,
+    "headWeight": 750,
+    "tracking": "-0.025em",
+    "case": "none",
+    "monoCase": "uppercase",
+    "monoTracking": "0.12em",
+    "heroScale": 1.1
+  },
+  "shape": {
+    "radius": 22,
+    "pill": 100,
+    "border": 2
+  },
+  "ground": "plain",
+  "emph": "color",
+  "motion": {
+    "family": "rise",
+    "hero": "slam",
+    "camera": [
+      "push",
+      "drift"
+    ]
+  },
+  "captions": "card",
+  "chrome": "index"
+}

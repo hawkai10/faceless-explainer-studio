@@ -1,0 +1,94 @@
+{
+  "id": "riso",
+  "preset": "cobalt-grid",
+  "mood": "two-colour risograph: paper, electric cobalt ink, graph grid, serif with italic emphasis",
+  "colors": {
+    "bg": "#F0EBDE",
+    "ink": "#1F2BE0",
+    "muted": "#4b55d8",
+    "faint": "#8d93e6",
+    "accent": "#1F2BE0",
+    "accentText": "#1F2BE0",
+    "onAccent": "#F0EBDE",
+    "neg": "#1F2BE0",
+    "pos": "#1F2BE0",
+    "surface": "rgba(31,43,224,0.05)",
+    "line": "rgba(31,43,224,0.45)",
+    "ground": "rgba(31,43,224,0.10)"
+  },
+  "faces": [
+    {
+      "family": "Newsreader",
+      "file": "Newsreader-Variable.woff2",
+      "weight": "200 800",
+      "style": "normal"
+    },
+    {
+      "family": "Newsreader",
+      "file": "Newsreader-Italic-Variable.woff2",
+      "weight": "200 800",
+      "style": "italic"
+    },
+    {
+      "family": "Hanken Grotesk",
+      "file": "HankenGrotesk-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    },
+    {
+      "family": "DM Mono",
+      "file": "DMMono-Regular.woff2",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "DM Mono",
+      "file": "DMMono-Medium.woff2",
+      "weight": "500",
+      "style": "normal"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "file": "IBMPlexMono-Regular.woff2",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "file": "Inter-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    }
+  ],
+  "stacks": {
+    "display": "\"Newsreader\", serif",
+    "body": "\"Hanken Grotesk\", \"Inter\", sans-serif",
+    "mono": "\"DM Mono\", \"IBM Plex Mono\", monospace"
+  },
+  "type": {
+    "displayWeight": 400,
+    "headWeight": 400,
+    "tracking": "-0.02em",
+    "case": "none",
+    "monoCase": "uppercase",
+    "monoTracking": "0.1em",
+    "heroScale": 1.15
+  },
+  "shape": {
+    "radius": 0,
+    "pill": 100,
+    "border": 1.5
+  },
+  "ground": "graph",
+  "emph": "italic",
+  "motion": {
+    "family": "type",
+    "hero": "type",
+    "camera": [
+      "drift",
+      "pull"
+    ]
+  },
+  "captions": "underline",
+  "chrome": "index"
+}

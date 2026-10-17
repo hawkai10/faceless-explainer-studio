@@ -1,0 +1,18 @@
+{
+  "name": "faceless-explainer-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CLI production line for data-driven explainer videos (Shorts and long-form) built on HyperFrames + GSAP.",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "Arvind Kedia (https://github.com/hawkai10)",
+  "type": "module",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "studio": "node _studio/bin/studio.mjs",
+    "setup": "node scripts/setup.mjs",
+    "lint": "node scripts/check-syntax.mjs",
+    "test": "npm --prefix mcp-openverse-audio test"
+  }
+}

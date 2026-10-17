@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Only the studio (code, docs, vendored open data) is version-controlled.
+# Videos, renders, downloaded media and third-party library assets stay local.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Every top-level folder is a video project (or local-only material) unless listed below.
+# `studio new` moves earlier videos into Produced Video/ — that and zz-* scratch stay local too.
+/*/
+!/_studio/
+!/mcp-openverse-audio/
+!/.github/
+!/scripts/
+
+# dependencies / temp files
+node_modules/
+.venv*/
+__pycache__/
+*.part
+*.tmp
+.DS_Store
+Thumbs.db
+
+# secrets and local machine config
+.env
+.env.*
+!.env.example
+.mcp.json
+_studio/.ytbrowser
+
+# local production log (written by `studio build`; template: history.example.json)
+_studio/history.json
+
+# private samples: retired-character art, TTS voice tests
+_studio/samples/
+_studio/voice-samples/
+
+# third-party library assets — licences forbid or restrict redistribution.
+# Re-fetch with the studio commands (README → Library assets); the LICENSES.json ledgers record each source.
+_studio/assets/*
+!_studio/assets/audio/
+!_studio/assets/lottie/
+!_studio/assets/svg/
+_studio/assets/audio/*
+_studio/assets/lottie/*
+_studio/assets/svg/*
+!_studio/assets/audio/LICENSES.json
+!_studio/assets/lottie/LICENSES.json
+!_studio/assets/svg/LICENSES.json
+
+# large downloaded binaries / build caches for the media tools (STUDIO.md → Media & quality tools)
+_studio/tools/upscayl/bin/
+_studio/tools/upscayl/models/
+_studio/vendor/maps/_cache/
+_studio/tools/media/_page.html
+
+# render outputs (inside video folders, in case one is force-added)
+**/renders/
+**/capture/footage/
+index-ch[0-9]*.html

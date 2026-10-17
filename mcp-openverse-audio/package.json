@@ -1,0 +1,27 @@
+{
+  "name": "mcp-openverse-audio",
+  "version": "0.1.0",
+  "description": "Local stdio MCP server for Claude Code: royalty-free music and sound effects from Openverse, with license enforcement, downloads and a provenance ledger. Fork of @pipeworx/mcp-openverse.",
+  "type": "module",
+  "main": "src/server.js",
+  "bin": {
+    "mcp-openverse-audio": "src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "keywords": ["mcp", "mcp-server", "openverse", "creative-commons", "royalty-free", "music", "sound-effects", "claude-code"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-openverse.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0"
+  }
+}

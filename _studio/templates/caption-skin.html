@@ -1,0 +1,99 @@
+<!--
+  Studio caption skin (template). `studio new` fills the caption vars + style class from
+  the look; captions.mjs fills GROUPS / DURATION / sizes; `studio build` then replaces
+  GROUPS with phrase chunks, EMPH with the video's emphasis words, and the @font-face set.
+  One house style (2026-10-02): plain text, no box, layered on top of the full-canvas picture in the
+  lower third (y ≈1270–1450, clear of the Shorts/Reels bottom UI). No per-word karaoke: each phrase
+  chunk appears whole; rupee values / numbers / listed key terms take the emphasis colour.
+  Per-frame overrides (spec → "captions": {"y": px, "tone": "dark"}) arrive in FRAMES.
+-->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+<style data-brand-tokens></style>
+
+<style>
+  #captions-root { position: absolute; inset: 0; pointer-events: none; }
+  .caption-layer { position: absolute; inset: 0; z-index: 20; pointer-events: none; }
+  /* lower third, layered ON TOP of the full-canvas picture (frames draw under and below it) */
+  .caption-stage { position: absolute; left: 70px; right: 70px; top: 1270px; height: 180px;
+    display: flex; align-items: center; justify-content: center; }
+  .caption-group { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; }
+  .caption-pill { max-width: 100%; box-sizing: border-box; }
+  .caption-line { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.04em 0.26em;
+    font-family: var(--c-font); font-weight: var(--c-weight); font-size: var(--c-size);
+    line-height: 1.16; letter-spacing: var(--c-track); text-transform: var(--c-case); }
+  /* overlay — plain text, no box: white with a thin dark outline + soft shadow so it reads on any picture */
+  .caption-word { display: inline-block; padding: 0 0.03em; color: var(--c-ink);
+    -webkit-text-stroke: var(--c-stroke-w) var(--c-stroke); paint-order: stroke fill;
+    text-shadow: 0 2px 3px var(--c-shadow), 0 0 18px var(--c-shadow), 0 0 2px var(--c-shadow); }
+  .caption-word.cap-em { color: var(--c-em); font-weight: var(--c-em-weight); }
+  /* per-frame tone "dark": ink text with a light halo, for very light frames */
+  .tone-dark .caption-word { color: var(--c-dark-ink); -webkit-text-stroke-color: var(--c-dark-stroke); text-shadow: 0 0 14px var(--c-dark-stroke), 0 0 2px var(--c-dark-stroke); }
+  .tone-dark .caption-word.cap-em { color: var(--c-dark-em); }
+  /* look caption colours (injected; must stay last so they win) */
+  /*__CAP_CSS__*/
+</style>
+
+<div id="captions-root" data-composition-id="captions" data-timeline-locked data-start="0" data-duration="0" data-fps="30" data-width="0" data-height="0">
+  <div class="caption-layer __CAP_CLASS__" aria-hidden="true">
+    <div id="caption-stage" class="caption-stage"></div>
+  </div>
+</div>
+
+<script>
+  var GROUPS = [];
+  var DURATION = 0;
+  var EMPH = [];
+  var FRAMES = {};
+
+  (function () {
+    var stage = document.getElementById("caption-stage");
+    var emph = EMPH.map(function (w) { return String(w).toLowerCase(); });
+    function isEm(raw, prev) {
+      var r = raw.replace(/[.,:;?!"”“]+$/, "").replace(/^["“]/, "");
+      if (/^[₹$€£]/.test(r) || /\d/.test(r) || /%$/.test(r)) return true;
+      if (/^(lakh|lakhs|crore|crores|k|million|billion)$/i.test(r) && /[\d₹]/.test(prev)) return true;
+      return emph.indexOf(r.toLowerCase()) >= 0;
+    }
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.createElement("div");
+      var fo = FRAMES[group.frame] || {};
+      groupEl.className = "caption-group" + (fo.tone ? " tone-" + fo.tone : "");
+      if (fo.y != null) groupEl.style.transform = "translateY(" + (fo.y - 1270) + "px)";
+      groupEl.id = "caption-group-" + g;
+      var pill = document.createElement("div");
+      pill.className = "caption-pill";
+      var line = document.createElement("div");
+      line.className = "caption-line";
+      (group.words || []).forEach(function (w, i) {
+        var span = document.createElement("span");
+        span.className = "caption-word";
+        span.id = "caption-word-" + g + "-" + i;
+        span.textContent = String(w.text);
+        var prev = i > 0 ? String(group.words[i - 1].text) : "";
+        if (isEm(String(w.text), prev)) span.className += " cap-em";
+        line.appendChild(span);
+      });
+      pill.appendChild(line);
+      groupEl.appendChild(pill);
+      stage.appendChild(groupEl);
+    });
+
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.getElementById("caption-group-" + g);
+      var next = GROUPS[g + 1];
+      var isLast = g === GROUPS.length - 1;
+      var start = Math.max(0, Number(group.start));
+      var end = isLast ? Math.min(DURATION, Number(group.end) + 0.6) : Math.min(Number(next.start), Number(group.end) + 0.3);
+      if (end <= start) end = start + 0.01;
+      tl.set(groupEl, { opacity: 1 }, start);
+      tl.set(groupEl, { opacity: 0 }, end);
+      var pill = groupEl.querySelector(".caption-pill");
+      tl.fromTo(pill, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.16, ease: "power2.out" }, start);
+    });
+    tl.to({}, { duration: DURATION }, 0);
+    window.__timelines["captions"] = tl;
+  })();
+</script>

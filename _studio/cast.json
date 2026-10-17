@@ -1,0 +1,133 @@
+{
+  "_about": "Retired house characters (kept on record). There is no recurring character since 2026-10-02: a video casts its own people from the 2D libraries in video.json → cast. Entries with \"retired\" are ignored by the build.",
+  "meera": {
+    "retired": "2026-10-02",
+    "name": "Meera",
+    "chosen": "2026-10-02",
+    "dicebear": {
+      "style": "toon-head",
+      "seed": "meera",
+      "options": {
+        "hair": [
+          "bun"
+        ],
+        "rearHair": [
+          "neckHigh"
+        ],
+        "beardProbability": 0,
+        "skinColor": [
+          "b07052"
+        ],
+        "hairColor": [
+          "2a1a14"
+        ],
+        "clothes": [
+          "turtleNeck"
+        ],
+        "clothesColor": [
+          "f2a541"
+        ]
+      }
+    },
+    "face": "smile",
+    "expressionKeys": [
+      "mouth",
+      "eyes",
+      "eyebrows"
+    ],
+    "outfitKeys": [
+      "clothes",
+      "clothesColor"
+    ],
+    "expressions": {
+      "smile": {
+        "mouth": [
+          "smile"
+        ],
+        "eyes": [
+          "happy"
+        ],
+        "eyebrows": [
+          "happy"
+        ]
+      },
+      "delighted": {
+        "mouth": [
+          "laugh"
+        ],
+        "eyes": [
+          "wide"
+        ],
+        "eyebrows": [
+          "raised"
+        ]
+      },
+      "wink": {
+        "mouth": [
+          "smile"
+        ],
+        "eyes": [
+          "wink"
+        ],
+        "eyebrows": [
+          "happy"
+        ]
+      },
+      "calm": {
+        "mouth": [
+          "smile"
+        ],
+        "eyes": [
+          "humble"
+        ],
+        "eyebrows": [
+          "neutral"
+        ]
+      },
+      "worried": {
+        "mouth": [
+          "sad"
+        ],
+        "eyes": [
+          "humble"
+        ],
+        "eyebrows": [
+          "sad"
+        ]
+      },
+      "sad": {
+        "mouth": [
+          "sad"
+        ],
+        "eyes": [
+          "bow"
+        ],
+        "eyebrows": [
+          "sad"
+        ]
+      },
+      "surprised": {
+        "mouth": [
+          "agape"
+        ],
+        "eyes": [
+          "wide"
+        ],
+        "eyebrows": [
+          "raised"
+        ]
+      },
+      "angry": {
+        "mouth": [
+          "angry"
+        ],
+        "eyes": [
+          "wide"
+        ],
+        "eyebrows": [
+          "angry"
+        ]
+      }
+    }
+  }
+}

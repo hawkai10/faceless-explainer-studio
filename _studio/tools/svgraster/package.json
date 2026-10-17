@@ -1,0 +1,8 @@
+{
+  "name": "svgraster",
+  "private": true,
+  "description": "SVG to PNG for preview sheets (unDraw, IconScout SVGs) — @resvg/resvg-js, MPL-2.0",
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

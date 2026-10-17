@@ -1,0 +1,70 @@
+{
+  "id": "coral",
+  "preset": "coral",
+  "mood": "bold magazine: cream, ink and coral surfaces meeting at hard edges, condensed caps",
+  "colors": {
+    "bg": "#F5F0E8",
+    "ink": "#1A1A1A",
+    "muted": "#5f5f5f",
+    "faint": "#9a9a9a",
+    "accent": "#E85D5D",
+    "accentText": "#C83F3F",
+    "onAccent": "#F5F0E8",
+    "neg": "#C83F3F",
+    "pos": "#1A1A1A",
+    "surface": "#E8E0D4",
+    "line": "#1A1A1A",
+    "ground": "rgba(232,93,93,0.9)"
+  },
+  "faces": [
+    {
+      "family": "Bebas Neue",
+      "file": "BebasNeue-Regular.woff2",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "file": "Inter-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    },
+    {
+      "family": "JetBrains Mono",
+      "file": "JetBrainsMono-Variable.woff2",
+      "weight": "100 800",
+      "style": "normal"
+    }
+  ],
+  "stacks": {
+    "display": "\"Bebas Neue\", \"Inter\", sans-serif",
+    "body": "\"Inter\", sans-serif",
+    "mono": "\"JetBrains Mono\", \"Inter\", monospace"
+  },
+  "type": {
+    "displayWeight": 400,
+    "headWeight": 400,
+    "tracking": "0.005em",
+    "case": "uppercase",
+    "monoCase": "uppercase",
+    "monoTracking": "0.12em",
+    "heroScale": 1.35
+  },
+  "shape": {
+    "radius": 0,
+    "pill": 0,
+    "border": 3
+  },
+  "ground": "hatch",
+  "emph": "block",
+  "motion": {
+    "family": "slide",
+    "hero": "slide",
+    "camera": [
+      "drift",
+      "push"
+    ]
+  },
+  "captions": "solid",
+  "chrome": "bar"
+}

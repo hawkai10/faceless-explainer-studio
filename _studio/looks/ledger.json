@@ -1,0 +1,64 @@
+{
+  "id": "ledger",
+  "preset": "blue-professional",
+  "mood": "consulting-grade restraint: cream, one cobalt accent, research-note calm",
+  "colors": {
+    "bg": "#fdfae7",
+    "ink": "#111111",
+    "muted": "#6b6b6b",
+    "faint": "#9a9a9a",
+    "accent": "#1e2bfa",
+    "accentText": "#1e2bfa",
+    "onAccent": "#fdfae7",
+    "neg": "#dc2626",
+    "pos": "#059669",
+    "surface": "rgba(30,43,250,0.04)",
+    "line": "rgba(30,43,250,0.20)",
+    "ground": "rgba(30,43,250,0.06)"
+  },
+  "faces": [
+    {
+      "family": "Space Grotesk",
+      "file": "SpaceGrotesk-Variable.woff2",
+      "weight": "300 700",
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "file": "Inter-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    }
+  ],
+  "stacks": {
+    "display": "\"Space Grotesk\", \"Inter\", sans-serif",
+    "body": "\"Inter\", sans-serif",
+    "mono": "\"Space Grotesk\", \"Inter\", sans-serif"
+  },
+  "type": {
+    "displayWeight": 700,
+    "headWeight": 600,
+    "tracking": "-0.02em",
+    "case": "none",
+    "monoCase": "uppercase",
+    "monoTracking": "0.08em",
+    "heroScale": 1
+  },
+  "shape": {
+    "radius": 14,
+    "pill": 100,
+    "border": 1.5
+  },
+  "ground": "grid",
+  "emph": "color",
+  "motion": {
+    "family": "rise",
+    "hero": "slam",
+    "camera": [
+      "push",
+      "drift"
+    ]
+  },
+  "captions": "card",
+  "chrome": "eyebrow"
+}

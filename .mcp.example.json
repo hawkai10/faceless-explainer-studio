@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "openverse-audio": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["mcp-openverse-audio/src/server.js"],
+      "env": { "AUDIO_PROJECT_ROOT": "_studio" }
+    }
+  }
+}

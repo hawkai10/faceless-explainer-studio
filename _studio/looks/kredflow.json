@@ -1,0 +1,76 @@
+{
+  "id": "kredflow",
+  "preset": "blue-professional",
+  "mood": "Kredflow house style: graphite studio + warm paper documents, one signal amber, Inter / Newsreader / JetBrains Mono",
+  "colors": {
+    "bg": "#0E1013",
+    "ink": "#ECE6DA",
+    "muted": "#A3A7AE",
+    "faint": "#5E636B",
+    "accent": "#F2A33A",
+    "accentText": "#F2A33A",
+    "onAccent": "#0E1013",
+    "neg": "#E5484D",
+    "pos": "#3DB9A4",
+    "surface": "rgba(236,230,218,0.05)",
+    "line": "rgba(236,230,218,0.18)",
+    "ground": "rgba(236,230,218,0.03)"
+  },
+  "faces": [
+    {
+      "family": "Inter",
+      "file": "Inter-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    },
+    {
+      "family": "Newsreader",
+      "file": "Newsreader-Variable.woff2",
+      "weight": "200 800",
+      "style": "normal"
+    },
+    {
+      "family": "Newsreader",
+      "file": "Newsreader-Italic-Variable.woff2",
+      "weight": "200 800",
+      "style": "italic"
+    },
+    {
+      "family": "JetBrains Mono",
+      "file": "JetBrainsMono-Variable.woff2",
+      "weight": "100 800",
+      "style": "normal"
+    }
+  ],
+  "stacks": {
+    "display": "\"Inter\", sans-serif",
+    "body": "\"Inter\", sans-serif",
+    "mono": "\"JetBrains Mono\", monospace",
+    "serif": "\"Newsreader\", serif"
+  },
+  "type": {
+    "displayWeight": 600,
+    "headWeight": 600,
+    "tracking": "-0.025em",
+    "case": "none",
+    "monoCase": "uppercase",
+    "monoTracking": "0.16em",
+    "heroScale": 1
+  },
+  "shape": {
+    "radius": 2,
+    "pill": 2,
+    "border": 1
+  },
+  "ground": "plain",
+  "emph": "color",
+  "motion": {
+    "family": "fade",
+    "hero": "fade",
+    "camera": [
+      "still"
+    ]
+  },
+  "captions": "plain",
+  "chrome": "index"
+}

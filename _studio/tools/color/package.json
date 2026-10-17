@@ -1,0 +1,6 @@
+{
+  "name": "studio-color",
+  "private": true,
+  "description": "Automatic palette mapping for library assets (recolor: \"auto\") — chroma-js (BSD/Apache)",
+  "dependencies": { "chroma-js": "^3.1.2" }
+}

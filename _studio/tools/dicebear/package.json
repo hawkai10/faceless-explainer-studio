@@ -1,0 +1,1 @@
+{ "name": "studio-dicebear", "private": true, "type": "module", "dependencies": { "@dicebear/core": "^9.4.2", "@dicebear/collection": "^9.4.2" } }

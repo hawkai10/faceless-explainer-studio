@@ -1,0 +1,32 @@
+name: Bug report
+description: Something in the studio doesn't work as documented
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you ran, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. node _studio/bin/studio.mjs new demo
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Output / logs
+      render: shell
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Windows 11, Node 22.x, Chrome 148, hyperframes 0.8.141"
+    validations:
+      required: true

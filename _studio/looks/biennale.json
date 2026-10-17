@@ -1,0 +1,88 @@
+{
+  "id": "biennale",
+  "preset": "biennale-yellow",
+  "mood": "museum catalogue: parchment, indigo ink, solar-yellow underprint, big tight serif",
+  "colors": {
+    "bg": "#E9E5DB",
+    "ink": "#1B2566",
+    "muted": "#4a5283",
+    "faint": "#8a8fb0",
+    "accent": "#F1EE2E",
+    "accentText": "#1B2566",
+    "onAccent": "#1B2566",
+    "neg": "#b8452a",
+    "pos": "#1B2566",
+    "surface": "rgba(27,37,102,0.04)",
+    "line": "rgba(27,37,102,0.35)",
+    "ground": "rgba(241,238,46,0.55)"
+  },
+  "faces": [
+    {
+      "family": "Instrument Serif",
+      "file": "InstrumentSerif-Regular.woff2",
+      "weight": "400",
+      "style": "normal"
+    },
+    {
+      "family": "Instrument Serif",
+      "file": "InstrumentSerif-Italic.woff2",
+      "weight": "400",
+      "style": "italic"
+    },
+    {
+      "family": "Newsreader",
+      "file": "Newsreader-Variable.woff2",
+      "weight": "200 800",
+      "style": "normal"
+    },
+    {
+      "family": "Archivo",
+      "file": "Archivo-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    },
+    {
+      "family": "JetBrains Mono",
+      "file": "JetBrainsMono-Variable.woff2",
+      "weight": "100 800",
+      "style": "normal"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "file": "IBMPlexMono-Regular.woff2",
+      "weight": "400",
+      "style": "normal"
+    }
+  ],
+  "stacks": {
+    "display": "\"Instrument Serif\", \"Newsreader\", serif",
+    "body": "\"Archivo\", sans-serif",
+    "mono": "\"JetBrains Mono\", \"IBM Plex Mono\", monospace"
+  },
+  "type": {
+    "displayWeight": 400,
+    "headWeight": 400,
+    "tracking": "-0.03em",
+    "case": "none",
+    "monoCase": "uppercase",
+    "monoTracking": "0.1em",
+    "heroScale": 1.25
+  },
+  "shape": {
+    "radius": 0,
+    "pill": 0,
+    "border": 1
+  },
+  "ground": "bloom",
+  "emph": "marker",
+  "motion": {
+    "family": "blur",
+    "hero": "blur",
+    "camera": [
+      "pull",
+      "drift"
+    ]
+  },
+  "captions": "plain",
+  "chrome": "index"
+}

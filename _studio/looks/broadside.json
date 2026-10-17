@@ -1,0 +1,100 @@
+{
+  "id": "broadside",
+  "preset": "broadside",
+  "mood": "protest poster: ink-black plane, massive lowercase type, fire-orange as the only voltage",
+  "colors": {
+    "bg": "#111111",
+    "ink": "#F0ECE5",
+    "muted": "#a8a49a",
+    "faint": "#6e6c64",
+    "accent": "#E85D26",
+    "accentText": "#F26A33",
+    "onAccent": "#111111",
+    "neg": "#E85D26",
+    "pos": "#F0ECE5",
+    "surface": "rgba(240,236,229,0.05)",
+    "line": "#3a3935",
+    "ground": "rgba(240,236,229,0.05)"
+  },
+  "faces": [
+    {
+      "family": "Barlow",
+      "file": "Barlow-Black.woff2",
+      "weight": "900",
+      "style": "normal"
+    },
+    {
+      "family": "Barlow",
+      "file": "Barlow-ExtraBold.woff2",
+      "weight": "800",
+      "style": "normal"
+    },
+    {
+      "family": "Barlow",
+      "file": "Barlow-Bold.woff2",
+      "weight": "700",
+      "style": "normal"
+    },
+    {
+      "family": "Barlow",
+      "file": "Barlow-SemiBold.woff2",
+      "weight": "600",
+      "style": "normal"
+    },
+    {
+      "family": "Barlow",
+      "file": "Barlow-Medium.woff2",
+      "weight": "500",
+      "style": "normal"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "file": "IBMPlexMono-Medium.woff2",
+      "weight": "500",
+      "style": "normal"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "file": "IBMPlexMono-SemiBold.woff2",
+      "weight": "600",
+      "style": "normal"
+    },
+    {
+      "family": "Inter",
+      "file": "Inter-Variable.woff2",
+      "weight": "100 900",
+      "style": "normal"
+    }
+  ],
+  "stacks": {
+    "display": "\"Barlow\", \"Inter\", sans-serif",
+    "body": "\"Barlow\", \"Inter\", sans-serif",
+    "mono": "\"IBM Plex Mono\", monospace"
+  },
+  "type": {
+    "displayWeight": 900,
+    "headWeight": 800,
+    "tracking": "-0.035em",
+    "case": "lowercase",
+    "monoCase": "uppercase",
+    "monoTracking": "0.14em",
+    "heroScale": 1.2
+  },
+  "shape": {
+    "radius": 0,
+    "pill": 0,
+    "border": 1
+  },
+  "ground": "plain",
+  "emph": "color",
+  "motion": {
+    "family": "slam",
+    "hero": "slam",
+    "camera": [
+      "push",
+      "pull"
+    ]
+  },
+  "captions": "solid",
+  "chrome": "index"
+}
