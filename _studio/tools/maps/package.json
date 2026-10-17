@@ -2,5 +2,5 @@
   "name": "studio-maps",
   "private": true,
   "description": "Regional map detail: mapshaper clips Natural Earth 1:50m to a frame's bounding box at build time (MPL-2.0)",
-  "dependencies": { "mapshaper": "^0.6.110" }
+  "dependencies": { "mapshaper": "^0.7.86" }
 }
